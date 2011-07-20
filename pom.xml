@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.pennychecker</groupId>
+	<artifactId>pennychecker-eventbus</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<name>pennychecker-eventbus</name>
+	<url>http://code.google.com/p/pennychecker-eventbus/</url>
+
+	<description>This library provides an 'eventbus' API implementation from Google IO 2009.</description>
+
+	<organization>
+		<name>pennychecker.com</name>
+		<url>http://www.pennychecker.com/</url>
+	</organization>
+
+	<issueManagement>
+		<system>Google Code</system>
+		<url>http://code.google.com/p/pennychecker-eventbus/issues/list</url>
+	</issueManagement>
+	<developers>
+		<developer>
+			<name>Steffen Kaempke</name>
+			<organization>development.pennychecker.com</organization>
+			<organizationUrl>http://www.pennychecker.com/</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>New BSD License</name>
+			<url>http://www.opensource.org/licenses/bsd-license.php</url>
+		</license>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2-beta-5</version>
+
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
